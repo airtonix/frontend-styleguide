@@ -5,23 +5,51 @@ For each component, place them in their own file.
 
   ```scss
   /* css/components/search-form.scss */
-  .search-form {
-    > .button { /* ... */ }
-    > .field { /* ... */ }
-    > .label { /* ... */ }
+  .search-form { /* ... */ }
+    .search-form__button { /* ... */ }
+    .search-form__field { /* ... */ }
+    .search-form__label { /* ... */ }
 
     // variants
-    &.-small { /* ... */ }
-    &.-wide { /* ... */ }
-  }
+    .search-form--small { /* ... */ }
+    .search-form--wide { /* ... */ }
   ```
 
-## Use glob matching
-In sass-rails and stylus, this makes including all of them easy:
+## Use media queries at the component root level
+In scss it looks like:
 
   ```scss
-  @import 'components/*';
+  @import 'component-name/screen';
   ```
+
+In your `screen.scss` file, it looks like:
+
+```scss
+@import "./component";
+
+@media #{breakpoint-gt(small)} {
+    @import "./component--mediumup";
+}
+
+```
+
+## Print styles separate from screen styles
+
+Components should a component level  `print.scss` file:
+
+```scss
+@media print {
+    @import "./component--print";
+}
+```
+
+Then if we're using a root `print.scss`:
+
+```scss
+@import "./components/component-name/component--print";
+```
+
+Otherwise we'll lazyload the print style with either `System.import` or using it as an entrypoint.
 
 ## Avoid over-nesting
 Use no more than 1 level of nesting. It's easy to get lost with too much nesting.
@@ -40,7 +68,12 @@ Use no more than 1 level of nesting. It's easy to get lost with too much nesting
 
   /* ✓ Better: 2 levels */
   .image-frame {
-    > .description { /* ... */ }
-    > .description > .icon { /* ... */ }
+    .image-frame__description { /* ... */ }
+    .image-frame__description-icon { /* ... */ }
   }
+
+  /* ✓ Idea: 1 level */
+  .image-frame { /* ... */ }
+    .image-frame__description { /* ... */ }
+    .image-frame__description-icon { /* ... */ }
   ```

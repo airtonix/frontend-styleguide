@@ -16,17 +16,20 @@ Be careful about nested components with elements sharing the same name as elemen
 </article>
 ```
 
-```scss
-.article-link {
-  > .title { /* ... */ }
-  > .count { /* ... (!!!) */ }
-}
-
-.vote-box {
-  > .up { /* ... */ }
-  > .down { /* ... */ }
-  > .count { /* ... */ }
-}
-```
-
 In this case, if `.article-link > .count` did not have the `>` (child) selector, it will also apply to the `.vote-box .count` element. This is one of the reasons why child selectors are preferred.
+
+Instead:
+
+
+```html
+<article class='article-link'>
+ <div class='vote-box article-link__vote-box'>
+    <button class='vote-box__button vote-box__button--up'></button>
+    <button class='vote-box__button vote-box__button--down'></button>
+    <span class='vote-box__count'>4</span>
+  </div>
+
+  <h3 class='article-link__title'>Article title</h3>
+  <p class='article-link__count'>3 votes</p>
+</article>
+```

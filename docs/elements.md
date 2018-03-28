@@ -5,44 +5,32 @@ Elements are things inside your component.
 ![](images/component-elements.png)
 
 ## Naming elements
-Each component may have elements. They should have classes that are only **one word**.
+Each component may have elements. They should have classes that are a combination of the component and the element.
 
 ```scss
-.search-form {
-  > .field { /* ... */ }
-  > .action { /* ... */ }
-}
+.search-form { /* ... */ }
+  .search-form__field { /* ... */ }
+  .search-form__action { /* ... */ }
 ```
 
 ## Element selectors
-Prefer to use the `>` child selector whenever possible. This prevents bleeding through nested components, and performs better than descendant selectors.
+follow the BEM convention.
 
 ```scss
 .article-card {
-  .title     { /* okay */ }
-  > .author  { /* ✓ better */ }
+  .title     { /* ✗ bad */ }
 }
-```
-
-## On multiple words
-For those that need two or more words, concatenate them without dashes or underscores.
-
-```scss
-.profile-box {
-  > .firstname { /* ... */ }
-  > .lastname { /* ... */ }
-  > .avatar { /* ... */ }
-}
+.article-card {}
+.article-card__author  { /* ✓ better */ }
 ```
 
 ## Avoid tag selectors
 Use classnames whenever possible. Tag selectors are fine, but they may come at a small performance penalty and may not be as descriptive.
 
 ```scss
-.article-card {
-  > h3    { /* ✗ avoid */ }
-  > .name { /* ✓ better */ }
-}
+.article-card > h3 { /* ✗ avoid */ }
+
+.article-card__name { /* ✓ better */ }
 ```
 
 Not all elements should always look the same. Variants can help.

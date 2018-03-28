@@ -7,33 +7,31 @@ Components may have variants. Elements may have variants, too.
 <br>
 
 ## Naming variants
-Classnames for variants will be prefixed by a dash (`-`).
+Classnames for variants will be prefixed by a double dash (`--`).
 
   ```scss
-  .like-button {
-    &.-wide { /* ... */ }
-    &.-short { /* ... */ }
-    &.-disabled { /* ... */ }
-  }
+  .like-button { /* ... */ }
+  .like-button--wide { /* ... */ }
+  .like-button--short { /* ... */ }
+  .like-button--disabled { /* ... */ }
   ```
 
 ## Element variants
 Elements may also have variants.
 
   ```scss
-  .shopping-card {
-    > .title { /* ... */ }
-    > .title.-small { /* ... */ }
-  }
+  .shopping-card { /* ... */ }
+  .shopping-card__title { /* ... */ }
+  .shopping-card__title--small { /* ... */ }
   ```
 
 ## Dash prefixes
-Dashes are the preferred prefix for variants.
+Double dashes are the preferred prefix for variants.
 
   * It prevents ambiguity with elements.
-  * A CSS class can only start with a letter, `_` or `-`.
-  * Dashes are easier to type than underscores.
-  * It kind of resembles switches in UNIX commands (`gcc -O2 -Wall -emit-last`).
+  * It highlights that the class name is a variant and also requires the base element class.
+  * A CSS class can only start with a letter.
+
 
 How do you deal with complex elements? Nest them.
 [Continue →](nested-components.md)

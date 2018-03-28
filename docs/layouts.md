@@ -19,22 +19,10 @@ Exception to these would be elements that have fixed width/heights, such as avat
 If you need to define these, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the *list* component, not the component itself.
 
   ```css
-  .article-list {
-    & {
-      @include clearfix;
-    }
-
-    > .article-card {
-      width: 33.3%;
-      float: left;
-    }
-  }
-
-  .article-card {
-    & { /* ... */ }
-    > .image { /* ... */ }
-    > .title { /* ... */ }
-    > .category { /* ... */ }
+  .featured-article-list { /* ... */ }
+  .featured-article-list__article-card {
+    width: 33.3%;
+    float: left;
   }
   ```
 

@@ -1,19 +1,24 @@
-# Table of contents
+<!-- {h1:.massive-header.-with-tagline} -->
 
-- [rscss](../README.md)
-- **Components**
-  - [About components](components.md)
-  - [Elements](elements.md)
-  - [Variants](variants.md)
-  - [Nested components](nested-components.md)
-  - [Layouts](layouts.md)
-  - [Helpers](helpers.md)
-- **Structure**
-  - [CSS Structure](css-structure.md)
-- **Notes**
-  - [Pitfalls](pitfalls.md)
-  - [Apprehensions](apprehensions.md)
-  - [Other resources](other-resources.md)
-- [Summary](summary.md)
-- **External resources**
-  - [Translations](translations.md)
+> Styling CSS without losing your sanity
+
+Reasonable System for CSS Stylesheet Structure.<br>
+A set of simple ideas to guide your process of building maintainable CSS.
+
+Introduction
+------------
+
+Any CSS greater than 1000 lines will get unwieldy. You'll eventually run into these common pitfalls:
+
+* "What does this class mean?"
+* "Is this class still being used?"
+* "If I make a new class `green`, will there be a clash?"
+
+**rscss** is an attempt to make sense of all these. It is not a framework. It's simply a set of ideas to guide your process of building maintainable CSS for any modern website or application.
+
+Let's get started by learning about components.
+[Continue →](docs/components.md)
+<!-- {p:.pull-box} -->
+
+----
+<!-- {hr: style='display:none'} -->

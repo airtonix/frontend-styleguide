@@ -4,11 +4,11 @@
 
 ```html
 <div class='article-link'>
-  <div class='vote-box'>
+  <div class='vote-box article-link__vote-box'>
     ...
   </div>
-  <h3 class='title'>...</h3>
-  <p class='meta'>...</p>
+  <h3 class='article-link__title'>...</h3>
+  <p class='article-link__meta'>...</p>
 </div>
 ```
 
@@ -27,7 +27,7 @@ A component may need to appear a certain way when nested in another component. A
 
 ```html
 <div class='article-header'>
-  <div class='vote-box -highlight'>
+  <div class='vote-box vote-box--highlight'>
     ...
   </div>
   ...
@@ -35,22 +35,20 @@ A component may need to appear a certain way when nested in another component. A
 ```
 
 ```scss
-.vote-box {
-  &.-highlight > .up { /* ... */ }
-}
+.vote-box--highlight .vote-box__up-vote { /* ... */ }
 ```
 
-## Simplifying nested components
-Sometimes, when nesting components, your markup can get dirty:
+## Avoid `@extends`
+Sometimes, when nesting components, your markup can get busy:
 
 ```html
 <div class='search-form'>
-  <input class='input' type='text'>
-  <button class='search-button -red -large'></button>
+  <input class='search-form__input' type='text'>
+  <button class='search-button search-button--red search-button--large'></button>
 </div>
 ```
 
-You can simplify this by using your CSS preprocessor's `@extend` mechanism:
+Resist the urge to simplify this by using your CSS preprocessor's `@extend` mechanism:
 
 ```html
 <div class='search-form'>
@@ -68,6 +66,10 @@ You can simplify this by using your CSS preprocessor's `@extend` mechanism:
   }
 }
 ```
+
+This results in descision paralysis when it comes time to extend `search-button`... will changing it break `search-form`?
+
+Don't use `@extends`.
 
 What about repeating elements like lists? Learn about Layouts.
 [Continue →](layouts.md)
