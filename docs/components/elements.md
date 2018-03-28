@@ -14,18 +14,18 @@ Each component may have elements. They should have classes that are a combinatio
 ```
 
 ## Element selectors
-follow the BEM convention.
+follow the BEM naming convention of component name and element name joined with a double underscore.
 
 ```scss
 .article-card {
   .title     { /* ✗ bad */ }
 }
 .article-card {}
-.article-card__author  { /* ✓ better */ }
+.article-card__title  { /* ✓ better */ }
 ```
 
 ## Avoid tag selectors
-Use classnames whenever possible. Tag selectors are fine, but they may come at a small performance penalty and may not be as descriptive.
+Use classnames whenever possible. Tag selectors are fine, but they incur a large specifity cost, which makes it harder for implementation specific code to override.
 
 ```scss
 .article-card > h3 { /* ✗ avoid */ }

@@ -1,12 +1,14 @@
 * [Introduction](README.md)
 
 * Components
-  * [About components](components.md)
-  * [Elements](elements.md)
-  * [Variants](variants.md)
-  * [Nested Components](nested-components.md)
-  * [layouts](layouts.md)
-  * [Helpers](Helpers.md)
+  * [Components](components/components.md)
+  * [Elements](components/elements.md)
+  * [Variants](components/variants.md)
+  * [Nested Components](components/nested-components.md)
+  * [Layouts](components/layouts.md)
+  * [Hacks](components/hacks.md)
+  * [Attaching Javascript](components/js-attachment.md)
 
 * Structure
-  * [CSS Structure](css-structure.md)
+  * [CSS Structure](structure/css-structure.md)
+  * [Javascript Structure](structure/js-structure.md)
