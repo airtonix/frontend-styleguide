@@ -80,7 +80,7 @@ Otherwise we'll lazyload the print style with either `System.import` or using it
 Use no more than 1 level of nesting. It's easy to get lost with too much nesting.
 
   ```scss
-  /* ✗ Avoid: 3 levels of nesting */
+  /* ✖️ Avoid: 3 levels of nesting */
   .image-frame {
     > .description {
       /* ... */
@@ -90,15 +90,40 @@ Use no more than 1 level of nesting. It's easy to get lost with too much nesting
       }
     }
   }
-
-  /* ✓ Better: 2 levels */
-  .image-frame {
-    .image-frame__description { /* ... */ }
-    .image-frame__description-icon { /* ... */ }
-  }
-
-  /* ✓ Idea: 1 level */
-  .image-frame { /* ... */ }
-    .image-frame__description { /* ... */ }
-    .image-frame__description-icon { /* ... */ }
   ```
+
+**What's wrong?**
+
+This creates problems later in a projects life (or for other project team members).
+Maintenance is usually performed long after the mental model of the project has left your mind, or in fact it was never there.
+
+Consider the steps to identify where such code could be found amongst the codebase:
+
+* a search for `.image-frame > .description > .icon` results in zero matches.
+* searching for `.description` results in far too many false matches.
+* searching for `.icon` is now soaking up precious time and mental energy.
+
+
+## Be more explicit
+
+```scss
+/* 🆗 OK: 2 levels */
+.image-frame {
+  .image-frame__description { /* ... */ }
+  .image-frame__description-icon { /* ... */ }
+}
+```
+
+```scss
+/* ✔️ Idea: 1 level */
+.image-frame { /* ... */ }
+  .image-frame__description { /* ... */ }
+  .image-frame__description-icon { /* ... */ }
+```
+
+When we use BEM, then often a css rule becomes very obvious in its purpose.
+
+Consider the following same scenarios from above:
+
+* A search for `.image-frame`, reveals only a few files. If we are following the file naming convention set out here, one of those files should be an obvious choice.
+* searching for `.image-frame__description-icon` is again even more specific.

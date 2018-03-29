@@ -1,11 +1,12 @@
-# Layouts
+Layouts
+==========
 
 Layouts are components. Difference being Layouts are where we control positioning and page specific styles.
 
 ![](../images/layouts.png)
 
 
-## Keep positioning properties for layouts
+### Keep positioning properties for layouts
 
 Components should be made in a way that they're reusable in different contexts. Avoid putting these properties on a components top level element:
 
@@ -14,7 +15,7 @@ Components should be made in a way that they're reusable in different contexts. 
   * Margins (`margin`)
   * Dimensions (`width`, `height`) *
 
-## Fixed dimensions
+### Fixed dimensions
 
 As indicated, the exception is that Elements and Nested Components can have positioning.
 
@@ -32,27 +33,27 @@ As indicated, the exception is that Elements and Nested Components can have posi
 
 ```scss
 .page {}
-.header { /* 👎 bad */
+.header { /* ✖️ bad */
     margin-top: rem-calc(24px);
 }
 ```
 
 ```scss
 .page {}
-.page__header { /* 👍 good */
+.page__header { /* ✔️ good */
     margin-top: rem-calc(24px);
 }
 ```
 
 Here positioning is an aspect of the `page` component, not the `header` component.
 
-## Define positioning in parents
+### Define positioning in parents
 
 If you need to define these, try to define them in whatever context they will be in. In this example below, notice that the widths and floats are applied on the *list* component, not the component itself.
 
   ```css
   .article-card {
-    /* 👎 bad */
+    /* ✖️ bad */
     width: 33.3%;
     float: left;
   }
@@ -62,7 +63,7 @@ If you need to define these, try to define them in whatever context they will be
   ```css
   .featured-article-list { /* ... */ }
   .featured-article-list__article-card {
-    /* 👍 better */
+    /* ✔️ better */
     width: 33.3%;
     float: left;
   }

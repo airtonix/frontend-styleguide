@@ -1,4 +1,5 @@
-# Nested components
+Nested components
+================
 
 ![](../images/component-nesting.png)
 
@@ -14,12 +15,12 @@
 
 Sometimes it's necessary to nest components. Here are some guidelines for doing that.
 
-## Variants
+### Variants
 A component may need to appear a certain way when nested in another component. Avoid modifying the nested component by reaching into it from the containing component.
 
 ```scss
 .article-header {
-  > .vote-box > .up { /* ✗ avoid this */ }
+  > .vote-box > .up { /* ✖️ avoid this */ }
 }
 ```
 
@@ -35,11 +36,11 @@ A component may need to appear a certain way when nested in another component. A
 ```
 
 ```scss
-/* ✔ better */
+/* ✔️ better */
 .vote-box--highlight .vote-box__up-vote { /* ... */ }
 ```
 
-## Avoid `@extends`
+### Avoid `@extends`
 Sometimes, when nesting components, your markup can get busy:
 
 ```html
@@ -59,18 +60,22 @@ Resist the urge to simplify this by using your CSS preprocessor's `@extend` mech
 ```
 
 ```scss
+/* ✖️ Bad */
 .search-form {
   > .submit {
     @extend .search-button;
-    @extend .search-button.-red;
-    @extend .search-button.-large;
+    @extend .search-button--red;
+    @extend .search-button--large;
   }
 }
 ```
 
-This results in descision paralysis when it comes time to extend `search-button`... will changing it break `search-form`?
+This results in problems like:
 
-Don't use `@extends`.
+* descision paralysis when it comes time to extend `search-button`... will changing it break `search-form`?
+* Searching for `.search-button`
+
+Moral of the story is: Don't use `@extends`.
 
 What about repeating elements like lists? Learn about Layouts.
 [Continue →](layouts.md)

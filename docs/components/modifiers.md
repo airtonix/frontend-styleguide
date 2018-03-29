@@ -1,4 +1,5 @@
-# Modifiers
+Modifiers
+==========
 
 Components may have modifiers. Elements may have modifiers, too.
 
@@ -9,7 +10,7 @@ Components may have modifiers. Elements may have modifiers, too.
 ## Naming variants
 Classnames for variants will be prefixed by a double dash (`--`).
 
-  ```scss
+```scss
   .like-button { /* ... */ }
   .like-button--wide { /* ... */ }
   .like-button--short { /* ... */ }
@@ -19,11 +20,11 @@ Classnames for variants will be prefixed by a double dash (`--`).
 ## Element variants
 Elements may also have variants.
 
-  ```scss
+```scss
   .shopping-card { /* ... */ }
   .shopping-card__title { /* ... */ }
   .shopping-card__title--small { /* ... */ }
-  ```
+```
 
 ## Variants are composiable
 Varian

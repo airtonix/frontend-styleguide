@@ -1,4 +1,5 @@
-# Attaching Javascript
+Attaching Javascript
+==========
 
 When a component requires javascript to deliver its features, we need to keep several things in mind:
 
@@ -6,6 +7,8 @@ When a component requires javascript to deliver its features, we need to keep se
   * Minimising the amount of code loaded unless needed.
   * Accepting different runtime configuration between several components.
 
+
+### Avoid mindless jQuery
 Consider the following typical example:
 
 
@@ -26,7 +29,7 @@ $(function () {
 })
 ```
 
-### What's wrong?
+**What's wrong?**
 
 This anti-pattern leads to many issues, which the Frontend Styleguide attempts to address.
 

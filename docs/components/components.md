@@ -5,7 +5,7 @@ Think in components. Consider each piece of your UI as an individual "component"
 
 ![](../images/component-example.png)
 
-## Naming components
+### Naming components
 Components will be named with **at least two words**, with a dash between each word. Examples of components:
 
   * A like button (`.like-button`)
