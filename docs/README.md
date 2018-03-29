@@ -31,7 +31,7 @@ Any amount of code greater than 1000 lines will get unwieldy. You'll eventually 
 - Behaviors apply JavaScript to a `[data-js-behavior-name]` selector.
 
 Let's get started by learning about components.
-[Continue →](docs/components.md 'class="pull-box"')
+[Continue →](docs/components/components.md)
 <!-- {p:.pull-box} -->
 
 ----

@@ -2,7 +2,7 @@
 
 Elements are things inside your component.
 
-![](images/component-elements.png)
+![](../images/component-elements.png)
 
 ## Naming elements
 Each component may have elements. They should have classes that are a combination of the component and the element.
@@ -34,5 +34,5 @@ Use classnames whenever possible. Tag selectors are fine, but they incur a large
 ```
 
 Not all elements should always look the same. Variants can help.
-[Continue →](variants.md)
+[Continue →](components/variants.md)
 <!-- {p:.pull-box} -->

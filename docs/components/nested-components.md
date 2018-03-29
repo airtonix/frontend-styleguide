@@ -1,6 +1,6 @@
 # Nested components
 
-![](images/component-nesting.png)
+![](../images/component-nesting.png)
 
 ```html
 <div class='article-link'>
@@ -35,6 +35,7 @@ A component may need to appear a certain way when nested in another component. A
 ```
 
 ```scss
+/* ✔ better */
 .vote-box--highlight .vote-box__up-vote { /* ... */ }
 ```
 

@@ -3,7 +3,7 @@ Components
 
 Think in components. Consider each piece of your UI as an individual "component".
 
-![](images/component-example.png)
+![](../images/component-example.png)
 
 ## Naming components
 Components will be named with **at least two words**, with a dash between each word. Examples of components:
@@ -16,5 +16,5 @@ Components will be named with **at least two words**, with a dash between each w
 Components can contain elements, and maybe other components.
 
 How do you write a component exactly? Let's learn about Elements.
-[Continue →](elements.md)
+[Continue →](components/elements.md)
 <!-- {p:.pull-box} -->

@@ -3,8 +3,10 @@
 ## One component per file
 For each component, place them in their own file.
 
+  * filename matches the component name
+
   ```scss
-  /* css/components/search-form.scss */
+  /* ./components/search/search-form.scss */
   .search-form { /* ... */ }
     .search-form__button { /* ... */ }
     .search-form__field { /* ... */ }
@@ -15,22 +17,44 @@ For each component, place them in their own file.
     .search-form--wide { /* ... */ }
   ```
 
+## One media query per file
+Component styles for different media queries have separate files.
+
+  * `./components/search/search-form` : all sizes, small up **required**
+  * `./components/search/search-form--smallonly`: small only
+  * `./components/search/search-form--largeup`: large up
+  * `./components/search/search-form--largeup-portrait`: large up, but only portrait
+  * `./components/search/search-form--print`: print styles
+
 ## Use media queries at the component root level
+Component screen and print media queries are bundled together in the root of the component folder:
+
+```bash
+ components/
+    search/
+        screen.scss
+        print.scss
+```
+
 In scss it looks like:
 
   ```scss
-  @import 'component-name/screen';
+  // ./components/screen.scss
+  @import './search-form/screen';
   ```
 
-In your `screen.scss` file, it looks like:
+In your `./component/search-form/screen.scss` file, it looks like:
 
 ```scss
-@import "./component";
+@import "./search-form";
 
-@media #{breakpoint-gt(small)} {
-    @import "./component--mediumup";
+@media #{breakpoint-lte(small)} { // less than or equal to small topend
+    @import "./search-form--smallonly";
 }
 
+@media #{breakpoint-gt(small)} { // greater than small topend
+    @import "./search-form--mediumup";
+}
 ```
 
 ## Print styles separate from screen styles
@@ -38,15 +62,16 @@ In your `screen.scss` file, it looks like:
 Components should a component level  `print.scss` file:
 
 ```scss
+// ./components/search-form/print.scss
 @media print {
-    @import "./component--print";
+    @import "./search-form--print";
 }
 ```
 
 Then if we're using a root `print.scss`:
 
 ```scss
-@import "./components/component-name/component--print";
+@import "./components/search-form/search-form--print";
 ```
 
 Otherwise we'll lazyload the print style with either `System.import` or using it as an entrypoint.

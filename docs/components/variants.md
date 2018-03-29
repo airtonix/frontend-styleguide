@@ -1,8 +1,8 @@
-# Variants
+# Modifiers
 
-Components may have variants. Elements may have variants, too.
+Components may have modifiers. Elements may have modifiers, too.
 
-![](images/component-modifiers.png)
+![](../images/component-modifiers.png)
 
 <br>
 
@@ -24,6 +24,9 @@ Elements may also have variants.
   .shopping-card__title { /* ... */ }
   .shopping-card__title--small { /* ... */ }
   ```
+
+## Variants are composiable
+Varian
 
 ## Dash prefixes
 Double dashes are the preferred prefix for variants.
