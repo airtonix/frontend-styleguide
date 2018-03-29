@@ -10,5 +10,9 @@
   * [Attaching Javascript](components/js-attachment.md)
 
 * Structure
-  * [CSS Structure](structure/css-structure.md)
-  * [Javascript Structure](structure/js-structure.md)
+  * [Stylesheets](structure/styles.md)
+  * [Javascript](structure/javascript.md)
+  * [Core Components](structure/core-components.md)
+  * [Project Components](structure/project-components.md)
+
+* [Credits](credits.md)

@@ -1,10 +1,12 @@
-## Structure
+Javascript
+==========
+
 
 ### Think in component behaviors
 
 Think that a piece of JavaScript code to will only affect 1 "component", that is, a section in the DOM.
 
-There files are "behaviors": code to describe dynamic JS behavior to affect a block of static HTML. In this example, the JS behavior `collapsible-nav` only affects a certain DOM subtree, and is placed on its own file.
+Their files are "behaviors": code to describe dynamic JS behavior to affect a block of static HTML. In this example, the JS behavior `collapsible-nav` only affects a certain DOM subtree, and is placed on its own file.
 
 ```html
 <!-- Component -->
@@ -15,6 +17,8 @@ There files are "behaviors": code to describe dynamic JS behavior to affect a bl
   <ul>...</ul>
 </div>
 ```
+
+?> **note** We don't actually have a behaviour called collapsiable-nav. it's just an example. To discover what is available in core checkout [http://core.patterns.fusion.one](our core component library).
 
 ```js
 /* Behavior - behaviors/collapsible-nav.js */
@@ -146,7 +150,7 @@ function getMeta (name) {
 getMeta('app:user_data:email')  // => 'john@gmail.com'
 ```
 
-## Writing code
+### Writing code
 
 These are conventions that can be handled by other libraries. For straight jQuery however, here are some guidelines on how to write behaviors.
 
