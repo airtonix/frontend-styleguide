@@ -21,6 +21,21 @@ follow the BEM naming convention of component name and element name joined with 
 .article-card {
   .title     { /* ✖️ bad */ }
 }
+```
+
+* complicates the specifity weight
+* ambigous use of `.title`, nesting components here could result in unintended application of styles.
+
+```scss
+.article-card {
+  &__title     { /* ✖️ bad */ }
+}
+```
+
+* removes the one to one parity between code in your editor and code in the browsers dev tools.
+
+
+```scss
 .article-card {}
 .article-card__title  { /* ✔️ better */ }
 ```
@@ -34,7 +49,7 @@ Use classnames whenever possible. Tag selectors are fine, but they incur a large
 .article-card__name { /* ✔️ better */ }
 ```
 
-### All elements are children of the component
+### Elements class names
 Despite the urge to do so, element class names should not be a representation of their position in the HTML Document Object Model.
 
 ```scss
@@ -46,6 +61,8 @@ Despite the urge to do so, element class names should not be a representation of
 .article-card__header__timestamp {}
 ```
 
+Instead element class names merely describe what component they belong to. (without raising the [css specifity score](https://www.google.com.au/search?q=css+specifity+score)).
+
 ```scss
 /* ✔️ better */
 .article-card {}
@@ -53,6 +70,36 @@ Despite the urge to do so, element class names should not be a representation of
     .article-card__title {}
     .article-card__author {}
     .article-card__timestamp {}
+```
+
+Even nested components can themselves be elements of the containing component. In [BEM, this is called a mixin](components/mixins.md).
+
+```html
+<div class="article-card">
+  <img class="article-card__thumbnail" src="...">
+  <div class="article-card__header">
+    <h3 class="article-card__title"> <!-- ... //--> </div>
+    <span class="article-card__author"> <!-- ... //--> </div>
+    <div class="article-card__timestamp"> <!-- ... //--> </div>
+    <a class="c-button c-button--primary article-card__link-button"
+       href="..."><!-- ... //--></a>
+  </div>
+</div>
+```
+
+```scss
+// @core/components/buttons/button.scss
+.c-button { /* ... */ }
+.c-button--primary { /* ... */ }
+```
+
+```scss
+// @site__abc123/components/articles/article-card.scss
+.article-card {}
+.article-card__link-button {
+  flex-grow: 0;
+  align-self: flex-end;
+}
 ```
 
 Not all elements should always look the same. There can be variations, Modiers can help.

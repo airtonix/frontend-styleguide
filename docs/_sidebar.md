@@ -1,18 +1,27 @@
 * [Introduction](README.md)
+  * [Conventions](conventions.md)
 
 * Components
   * [Components](components/components.md)
   * [Elements](components/elements.md)
-  * [Variants](components/variants.md)
+  * [Modifiers](components/modifiers.md)
+  * [Mixins](components/mixins.md)
   * [Nested Components](components/nested-components.md)
   * [Layouts](components/layouts.md)
-  * [Hacks](components/hacks.md)
-  * [Attaching Javascript](components/js-attachment.md)
+  * [Behaviours](components/behaviours.md)
+
+* Behaviours
+  * [What are behaviours](./behaviours/intro.md)
 
 * Structure
   * [Stylesheets](structure/styles.md)
   * [Javascript](structure/javascript.md)
   * [Core Components](structure/core-components.md)
   * [Project Components](structure/project-components.md)
+  * [Hacks](components/hacks.md)
+
+* Standards
+  * [Scripts](standard/scripts.md)
+  * [Styles](standard/styles.md)
 
 * [Credits](credits.md)
