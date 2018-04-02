@@ -15,7 +15,7 @@ Nested components
 
 Sometimes it's necessary to nest components. Here are some guidelines for doing that.
 
-### Variants
+### Modifiers
 A component may need to appear a certain way when nested in another component. Avoid modifying the nested component by reaching into it from the containing component.
 
 ```scss
