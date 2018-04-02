@@ -1,9 +1,11 @@
 # CSS structure
 
 ## One component per file
-For each component, place them in their own file.
 
-  * filename matches the component name
+?> 💬 In BEM, every class selector is either the block name itself or uses the block name as a prefix, and the rules for each block live in their own dedicated file. Since file systems do not allow two files to have the same name, the OS is actually helping to prevent accidental duplication. If you follow all of the BEM naming conventions, and you ensure all block code resides in its own file, you will never have naming collisions. - [Philip Walton article on the side effects of css](https://philipwalton.com/articles/side-effects-in-css/)
+
+  * filename matches the component name.
+  * breakpoint variations also have their own file.
 
   ```scss
   /* ./components/search/search-form.scss */
@@ -19,6 +21,18 @@ For each component, place them in their own file.
 
 ## One media query per file
 Component styles for different media queries have separate files.
+
+```scss
+.search-form {
+  width: 100%;
+
+  @media breakpoint-gt(#{$small}) { /* ✖️ Bad */
+    width: rem-calc(256px);
+  }
+}
+```
+
+  Instead keep styles for each breakpoint in a separate file, repeating only just enough in order to override rules from small screen files.
 
   * `./components/search/search-form` : all sizes, small up **required**
   * `./components/search/search-form--smallonly`: small only
