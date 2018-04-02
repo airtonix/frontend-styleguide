@@ -1,42 +1,6 @@
 Javascript
 ==========
 
-
-### Think in component behaviors
-
-Think that a piece of JavaScript code to will only affect 1 "component", that is, a section in the DOM.
-
-Their files are "behaviors": code to describe dynamic JS behavior to affect a block of static HTML. In this example, the JS behavior `collapsible-nav` only affects a certain DOM subtree, and is placed on its own file.
-
-```html
-<!-- Component -->
-<div class='main-navbar' data-js-collapsible-nav>
-  <button class='expand' data-js-expand>Expand</button>
-
-  <a href='/'>Home</a>
-  <ul>...</ul>
-</div>
-```
-
-?> **note** We don't actually have a behaviour called collapsiable-nav. it's just an example. To discover what is available in core checkout [http://core.patterns.fusion.one](our core component library).
-
-```js
-/* Behavior - behaviors/collapsible-nav.js */
-
-$(function () {
-  var $nav = $('[data-js-collapsible-nav]')
-  if (!$nav.length) return
-
-  $nav
-    .on('click', '[data-js-expand]', function () {
-      $nav.addClass('-expanded')
-    })
-    .on('mouseout', function () {
-      $nav.removeClass('-expanded')
-    })
-})
-```
-
 ### One component per file
 
 Each file should a self-contained piece of code that only affects a *single* element type.
