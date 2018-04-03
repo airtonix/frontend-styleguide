@@ -1,4 +1,5 @@
 * [Introduction](README.md)
+  * [Aims](aims.md)
   * [Conventions](conventions.md)
 
 * Components
@@ -10,18 +11,16 @@
   * [Layouts](components/layouts.md)
   * [Behaviours](components/behaviours.md)
 
-* Behaviours
-  * [What are behaviours](./behaviours/intro.md)
-
-* Structure
-  * [Stylesheets](structure/styles.md)
-  * [Javascript](structure/javascript.md)
-  * [Core Components](structure/core-components.md)
-  * [Project Components](structure/project-components.md)
+* Project Structure
+  * [Stylesheets](project-structure/styles.md)
+  * [Javascript](project-structure/javascript.md)
+  * [Core Components](project-structure/core-components.md)
+  * [Project Components](project-structure/project-components.md)
   * [Hacks](components/hacks.md)
 
 * Standards
-  * [Scripts](standard/scripts.md)
-  * [Styles](standard/styles.md)
+  * [Scripts](standards/scripts.md)
+  * [Styles](standards/styles.md)
 
+* [Changelog](../CHANGELOG.md)
 * [Credits](credits.md)
