@@ -102,6 +102,41 @@ Even nested components can themselves be elements of the containing component. I
 }
 ```
 
+## Avoid describing the design in HTML
+
+```html
+```
+
+```html
+/* ✖️bad */
+<div class="layout"> /* 🅰️ */
+    <div class="row"> /* 1️⃣ */
+        <div class="layout-content">  /* 🅱️ */
+            <div class="large-12 columns layout-cell"> /* 2️⃣ */
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+```html
+/* ✔️ Better */
+<div class="layout"> /* 1️⃣ */
+    <div class="layout__container">
+
+    </div>
+</div>
+```
+
+**What's wrong?***
+
+ * point one.
+ * point one.
+ * point one.
+ * point one.
+
+
 Not all elements should always look the same. There can be variations, Modiers can help.
 [Continue →](components/modifiers.md)
 <!-- {p:.pull-box} -->

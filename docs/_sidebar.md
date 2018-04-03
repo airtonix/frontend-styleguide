@@ -1,5 +1,5 @@
 * [Introduction](README.md)
-  * [Aims](aims.md)
+  * [Purpose](purpose.md)
   * [Conventions](conventions.md)
 
 * Components
@@ -22,5 +22,5 @@
   * [Scripts](standards/scripts.md)
   * [Styles](standards/styles.md)
 
-* [Changelog](../CHANGELOG.md)
+* [Changelog](changelog.md)
 * [Credits](credits.md)

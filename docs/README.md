@@ -4,7 +4,7 @@
 > Frontend development without losing your sanity
 
 Fusion standards for frontend coding.<br>
-A set of simple ideas to guide your process of building maintainable javascript and css.
+A set of simple ideas to guide your process of building maintainable html, javascript and css.
 
 Introduction
 ------------
@@ -33,10 +33,9 @@ Any amount of code greater than 1000 lines will get unwieldy. You'll eventually 
 ?> 🚡 At this point, you can get started by learning [about components →](docs/components/components.md)
 
 ## In depth
-
 ?> 🏆 https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/
 
-### BEM
+### BEM {docsify-ignore}
 
 ?> 🗻 Getting your rules to match the elements you want, without them accidentally matching the elements you don’t.
 
@@ -48,7 +47,7 @@ As outlined by [Robin Rendle](https://css-tricks.com/bem-101/#article-header-id-
 1. If we are reading the markup instead of CSS, we should be able to quickly get an idea of which element depends on another (in the previous example we can see that .btn__price depends on .btn, even if we don't know what that does just yet.)
 1. Designers and developers can consistently name components for easier communication between team members. In other words, BEM gives everyone on a project a declarative syntax that they can share so that they're on the same page.
 
-### The confidence to change
+### The confidence to change {docsify-ignore}
 
 [Harry Roberts](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces) talks about the fear of change
 > This is the main reason we end up with bloated code bases, full of legacy and unknown CSS that we daren't touch. We lack the confidence to be able to work with and modify existing styles because we fear the consequences of CSS' globally operating and leaky nature. Almost all problems with CSS at scale boil down to confidence (or lack thereof): People don't know what things do any more. People daren't make changes because they don't know how far reaching the effects will be.

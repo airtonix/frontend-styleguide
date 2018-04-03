@@ -1,4 +1,4 @@
-# Convetions
+# Conventions
 
 While compiling, editing and merging other works into this document we ended up using some conventions to indicate purpose and tone throughout.
 
