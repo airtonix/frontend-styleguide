@@ -1,3 +1,19 @@
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/compare/v0.0.2...v0.0.3) (2018-04-03)
+
+
+### Build
+
+* changelog, release tool and aims ([e543e9bdbc7359de5bde871fafe33a2e100f1e6e](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/commit/e543e9bdbc7359de5bde871fafe33a2e100f1e6e))
+
+### Fix
+
+* add publish command ([d08c463c4ae42375f65aeaaa9c1cd4a7200e657d](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/commit/d08c463c4ae42375f65aeaaa9c1cd4a7200e657d))
+* remove duplicate files ([6f96d363c2eae19f4a1f385975b01377e0bf04cf](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/commit/6f96d363c2eae19f4a1f385975b01377e0bf04cf))
+* update how changelog is rendered ([b68862432026aaefa1aad9f94e3652df63829083](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/commit/b68862432026aaefa1aad9f94e3652df63829083))
+
+
+
 <a name="0.0.2"></a>
 ## [0.0.2](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/compare/v1.3.0...v0.0.2) (2018-04-03)
 

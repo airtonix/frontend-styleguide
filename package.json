@@ -8,7 +8,7 @@
   },
   "scripts": {
     "serve": "docsify serve docs",
-    "version": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "version": "conventional-changelog -p eslint -i docs/CHANGELOG.md -s -r 0 && git add docs/CHANGELOG.md",
     "publish": "git push --follow-tags origin master"
   },
   "repository": {
