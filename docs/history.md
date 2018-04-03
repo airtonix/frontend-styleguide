@@ -1,3 +1,3 @@
 # Changelog {docsify-ignore-all}
 
-[filename](CHANGELOG.md ':include')
+['./changelog.md'](CHANGELOG.md ':include')
