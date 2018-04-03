@@ -1,3 +1,13 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/compare/v0.0.3...v0.0.4) (2018-04-03)
+
+
+### Fix
+
+* output file in correct place ([ab5090c579f475257f5d988f9cf63095be224a7b](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/commit/ab5090c579f475257f5d988f9cf63095be224a7b))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/fusion-com-au/fusion-frontend-coding-styleguide/compare/v0.0.2...v0.0.3) (2018-04-03)
 
