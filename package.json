@@ -6,17 +6,9 @@
   "directories": {
     "doc": "docs"
   },
-  "standard-version": {
-    "skip": {
-        "bump": true,
-        "commit": true,
-        "tag": true
-    },
-    "infile": "docs/changelog.md"
-  },
   "scripts": {
     "serve": "docsify serve docs",
-    "release": "standard-version",
+    "version": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "publish": "git push --follow-tags origin master"
   },
   "repository": {

@@ -22,5 +22,5 @@
   * [Scripts](standards/scripts.md)
   * [Styles](standards/styles.md)
 
-* [Changelog](changelog.md)
+* [History](history.md)
 * [Credits](credits.md)
