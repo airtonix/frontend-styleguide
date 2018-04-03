@@ -12,7 +12,7 @@
         "commit": true,
         "tag": true
     },
-    "infile": "docs/CHANGELOG.md"
+    "infile": "docs/changelog.md"
   },
   "scripts": {
     "serve": "docsify serve docs",
