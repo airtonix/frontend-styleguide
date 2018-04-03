@@ -1,13 +1,14 @@
 {
   "name": "frontend-styleguide",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "<!-- {h5: style='display:none'} -->",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "serve": "docsify serve docs"
+    "serve": "docsify serve docs",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "dependencies": {
     "docsify": "^4.6.10",
     "docsify-cli": "^4.2.1"
+  },
+  "devDependencies": {
+    "standard-version": "^4.3.0"
   }
 }
