@@ -41,7 +41,7 @@ follow the BEM naming convention of component name and element name joined with 
 ```
 
 ### Avoid tag selectors
-Use classnames whenever possible. Tag selectors are fine, but they incur a large specifity cost, which makes it harder for implementation specific code to override.
+Always use class name selectors. Tag selectors should be reserved for wysiwyg rules, where they will incur a large [specificity cost](https://www.google.com.au/search?q=css+specifity+score). This is what we want, it harder for implementation specific code to override.
 
 ```scss
 .article-card > h3 { /* ✖️ avoid */ }
@@ -72,7 +72,7 @@ Instead element class names merely describe what component they belong to. (with
     .article-card__timestamp {}
 ```
 
-Even nested components can themselves be elements of the containing component. In [BEM, this is called a mixin](components/mixins.md).
+Even nested components can themselves be elements of the containing component. In [BEM, this is called a 'mix'](components/mixins.md).
 
 ```html
 <div class="article-card">
@@ -109,10 +109,10 @@ Even nested components can themselves be elements of the containing component. I
 
 ```html
 /* ✖️bad */
-<div class="layout"> /* 🅰️ */
-    <div class="row"> /* 1️⃣ */
-        <div class="layout-content">  /* 🅱️ */
-            <div class="large-12 columns layout-cell"> /* 2️⃣ */
+<div class="layout"> /* 🥚 */
+    <div class="row"> /* 🐤 */
+        <div class="layout-content">  /* 🐔 */
+            <div class="large-12 columns layout-cell"> /* 🐓 */
                 ...
             </div>
         </div>
@@ -123,7 +123,9 @@ Even nested components can themselves be elements of the containing component. I
 ```html
 /* ✔️ Better */
 <div class="layout"> /* 1️⃣ */
-    <div class="layout__container">
+    <div class="layout__container"> /* 2️⃣ */
+
+      <div class="layout__cell"> ... </div> /* 3️⃣ */
 
     </div>
 </div>
@@ -131,10 +133,12 @@ Even nested components can themselves be elements of the containing component. I
 
 **What's wrong?***
 
- * point one.
- * point one.
- * point one.
- * point one.
+The bird is not the way.
+
+ * 🥚 Starts out good, the component right?
+ * 🐤 First element, it's not marked as a element of our component `layout`. superflous,
+ * 🐔 Second element (which should be the first) doesn't follow BEM convention. If we're keeping the name, it should be `layout__content` but here it should be 2️⃣
+ * 🐓 Third element... again doesn't follow BEM convention. should be `layout__cell` as in 3️⃣
 
 
 Not all elements should always look the same. There can be variations, Modiers can help.

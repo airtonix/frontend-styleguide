@@ -1,7 +1,7 @@
 {
   "name": "frontend-styleguide",
   "version": "0.0.4",
-  "description": "<!-- {h5: style='display:none'} -->",
+  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs"

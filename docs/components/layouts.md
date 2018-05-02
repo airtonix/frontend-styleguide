@@ -13,18 +13,18 @@ Components should be made in a way that they're reusable in different contexts. 
   * Positioning (`position`, `top`, `left`, `right`, `bottom`)
   * Floats (`float`, `clear`)
   * Margins (`margin`)
-  * Dimensions (`width`, `height`) *
+  * Dimensions (`width`, `height`)
 
 ### Fixed dimensions
 
-As indicated, the exception is that Elements and Nested Components can have positioning.
+As indicated, the exception is that Elements and Nested Components can have positioning. However the rule still stands that Components should not have  positioning rules 1️⃣, these go on the mix classname 2️⃣.
 
 ```html
-<div class="page">
-    <div class="page__container">
-        <header class="header page__header">
-            <h2 class="header__heading">A heading</h2>
-            <small class="header__meta">last edited 2010-10-01</small>
+<div class="article-page">
+    <div class="article-page__container">
+        <header class="page-header article-page__header">
+            <h2 class="page-header__heading">A heading</h2>
+            <small class="page-header__meta">last edited 2010-10-01</small>
         </header>
     </div>
 </div>
@@ -32,15 +32,15 @@ As indicated, the exception is that Elements and Nested Components can have posi
 
 
 ```scss
-.page {}
-.header { /* ✖️ bad */
+.article-page {}
+.page-header { /* ✖️ bad 1️⃣ */
     margin-top: rem-calc(24px);
 }
 ```
 
 ```scss
-.page {}
-.page__header { /* ✔️ good */
+.article-page {}
+.article-page__header { /* ✔️ good 2️⃣ */
     margin-top: rem-calc(24px);
 }
 ```
