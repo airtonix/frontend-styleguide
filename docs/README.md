@@ -30,7 +30,7 @@ Any amount of code greater than 1000 lines will get unwieldy. You'll eventually 
 - HTML elements can be _components_ that have _behaviors_.
 - Behaviors apply JavaScript to a `[data-js-behavior-name]` selector.
 
-?> 🚡 At this point, you can get started by learning [about components →](docs/components/components.md)
+?> 🚡 At this point, you can get started by learning [about components →](components/components.md)
 
 ## In depth
 ?> 🏆 https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/
