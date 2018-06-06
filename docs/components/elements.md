@@ -41,7 +41,7 @@ follow the BEM naming convention of component name and element name joined with 
 ```
 
 ### Avoid tag selectors
-Always use class name selectors. Tag selectors should be reserved for wysiwyg rules, where they will incur a large [specificity cost](https://www.google.com.au/search?q=css+specifity+score). This is what we want, it harder for implementation specific code to override.
+Always use class name selectors. Tag selectors should be reserved for wysiwyg rules, where they will incur a large [specificity cost](https://www.google.com.au/search?q=css+specifity+score). Inside a wysiwyg area we want it to be harder for implementation specific code to override styles there. Outside of wysiwyg, all of your elements should have class names that follow BEM conventions outlined in this guide. 
 
 ```scss
 .article-card > h3 { /* ✖️ avoid */ }
