@@ -1,9 +1,7 @@
-# Fusion Styleguide
+# Frontend Styleguide
 <!-- {h1:.massive-header.-with-tagline} -->
 
-> Frontend development without losing your sanity
-
-Fusion standards for frontend coding.<br>
+Our standards for frontend coding.<br>
 A set of simple ideas to guide your process of building maintainable html, javascript and css.
 
 Introduction
@@ -12,17 +10,17 @@ Introduction
 Any amount of code greater than 1000 lines will get unwieldy. You'll eventually run into these common pitfalls:
 
 * "What does this class mean?"
-* "Is this jQuery even used anymore?"
+* "Is this javascript even used anymore?"
 * "Is this class still being used?"
 * "What can the relevant markup look like?"
-* "If I make a new class `green`, will there be a clash?"
+* "If I make a new class `.red`, will there be a clash?"
 * "Why is this page taking ages to load?"
 
-**Fusion Styleguide** is an attempt to make sense of all these. It is not a framework. It's simply a set of ideas to guide your process of building maintainable code for any modern website or application.
+**Frontend Styleguide** is an attempt to make sense of all these. It is not a framework. It's simply a set of ideas to guide your process of building maintainable code for any modern website or application.
 
 ## In a nutshell
 
-**Fusion Styleguide** seeks to make Css and JavaScript easy to maintain in a typical web application. All recommendations here have these goals in mind:
+**Frontend Styleguide** seeks to make Css and JavaScript easy to maintain in a typical web application. All recommendations here have these goals in mind:
 
 - Keep your HTML _declarative_ (get rid of inline scripts).
 - Put all your _imperative_ code in JS files.

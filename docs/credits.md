@@ -7,7 +7,3 @@ He is also the creator of the following amazing projects:
 
 * [devhints](https://devhints.io/), quick reference reminder cards for an incredible amount of languages and tools.
 * [onmount](https://github.com/rstacruz/onmount)
-
-### Contributors
-
-* [Zenobius Jiricek](https://github.com/airtonix) Frontend Developer @Fusion

@@ -41,7 +41,7 @@ follow the BEM naming convention of component name and element name joined with 
 ```
 
 ### Avoid tag selectors
-Always use class name selectors. Tag selectors should be reserved for wysiwyg rules, where they will incur a large [specificity cost](https://www.google.com.au/search?q=css+specifity+score). Inside a wysiwyg area we want it to be harder for implementation specific code to override styles there. Outside of wysiwyg, all of your elements should have class names that follow BEM conventions outlined in this guide. 
+Always use class name selectors. Tag selectors should be reserved for wysiwyg rules, where they will incur a large [specificity cost](https://www.google.com.au/search?q=css+specifity+score). Inside a wysiwyg area we want it to be harder for implementation specific code to override styles there. Outside of wysiwyg, all of your elements should have class names that follow BEM conventions outlined in this guide.
 
 ```scss
 .article-card > h3 { /* ✖️ avoid */ }
@@ -66,10 +66,10 @@ Instead element class names merely describe what component they belong to. (with
 ```scss
 /* ✔️ better */
 .article-card {}
-  .article-card__header {}
-    .article-card__title {}
-    .article-card__author {}
-    .article-card__timestamp {}
+.article-card__header {}
+.article-card__title {}
+.article-card__author {}
+.article-card__timestamp {}
 ```
 
 Even nested components can themselves be elements of the containing component. In [BEM, this is called a 'mix'](components/mixins.md).
@@ -103,9 +103,6 @@ Even nested components can themselves be elements of the containing component. I
 ```
 
 ## Avoid describing the design in HTML
-
-```html
-```
 
 ```html
 /* ✖️bad */

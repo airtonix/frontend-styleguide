@@ -2,24 +2,21 @@
   * [Purpose](purpose.md)
   * [Conventions](conventions.md)
 
-* Components
+* Design
   * [Components](components/components.md)
   * [Elements](components/elements.md)
   * [Modifiers](components/modifiers.md)
   * [Nested Components](components/nested-components.md)
   * [Layouts](components/layouts.md)
-  * [Behaviours](components/behaviours.md)
 
-* Project Structure
-  * [Stylesheets](project-structure/styles.md)
-  * [Javascript](project-structure/javascript.md)
-  * [Core Components](project-structure/core-components.md)
-  * [Project Components](project-structure/project-components.md)
-  * [Hacks](components/hacks.md)
+* State
+  * [API](state/api.md)
+  * [Containers](state/containers.md)
 
-* Standards
-  * [Scripts](standards/scripts.md)
-  * [Styles](standards/styles.md)
+* Styling
+  * [Runtime theming](styles/runtime-theming.md)
+  * [Coding Standards](styles/coding-standards.md)
+  * [Project Structure](styles/project-structure.md)
 
 * [History](history.md)
 * [Credits](credits.md)
